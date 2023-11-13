@@ -1,0 +1,272 @@
+* {
+    scroll-behavior: smooth;
+    background: rgba(0, 0, 0, 0.199);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1 {
+    background-color: transparent;
+}
+
+p {
+    background-color: transparent;
+}
+
+.navbar-nav,
+.nav-item {
+    background-color: transparent;
+}
+
+
+/***************************** section 1 ****************************/
+
+.sec {
+    min-height: 100vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#back video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.box {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(142, 224, 35)8, 138, 40);
+    margin-top: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg, rgb(233, 233, 104), rgb(50, 236, 174));
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #0F0F0F;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content #tony {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.box:hover .content #tony {
+    opacity: 0;
+}
+
+.content h2 {
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.content a {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.content a:hover {
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: black);
+    font-weight: bold;
+}
+
+
+/*doesn't look imp but is*/
+
+div {
+    background-color: transparent;
+}
+
+.cardd-background {
+    object-fit: cover;
+    background-position: center center;
+    filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.containerr {
+    align-items: center;
+    display: flex;
+    height: 280px;
+    justify-content: center;
+}
+
+.cardd {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+}
+
+.cardd:hover #hello {
+    top: -10%;
+    filter: brightness(60%);
+}
+
+.cardd:hover .text {
+    bottom: 0;
+}
+
+.cardd #hello {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 115%;
+}
+
+.text {
+    bottom: -47%;
+    padding: 15px;
+    position: absolute;
+    transition: 0.7s ease-in-out;
+    font-weight: bold;
+}
+
+.text h2 {
+    color: white;
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 5px;
+    position: relative;
+    background: transparent;
+}
+
+.text p {
+    color: #fff;
+    font-weight: 300;
+    background: transparent;
+}
+
+.wrapper {
+    height: 10vh;
+    /*This part is important for centering*/
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*text with image*/
+
+.picwith {
+    display: flex;
+}
+
+.boxo {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Optional: Add some styling for better visibility */
+
+.boxo:nth-child(1) {
+    background-color: transparent;
+    width: 30%;
+}
+
+.boxo:nth-child(2) {
+    width: 70%;
+    background-color: transparent;
+}
+
+#loki {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .picwith {
+        width: 100%;
+    }
+    .boxo {
+        width: 100%;
+    }
+    .boxo:nth-child(1) {
+        display: none;
+    }
+    #loki {
+        display: none;
+    }
+    .boxo:nth-child(2) {
+        min-width: 100%;
+        /* Take up the full width on smaller screens */
+    }
+}
